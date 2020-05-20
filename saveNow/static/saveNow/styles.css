@@ -1,0 +1,107 @@
+body{
+    background-image:url(../saveNow/images/secu.jpg);
+    background-size: cover;
+    }
+.wrapper{
+	margin: 0 auto;
+	width: 1000px;
+}
+.navpadding{
+    width:1620px;
+}
+.copyright{
+    padding:100px;
+    padding-left:600px;
+}
+body{
+    background-color:rgb(207, 224, 241);
+}
+.lead{
+    font-size:20px;
+    color:black;
+}
+.div{
+    /* background-color:#c5d4e9; */
+	width:420px;
+	height:560px;
+	position:absolute;
+	right:350px;
+	left:600px;
+	top:140px;
+	bottom:100px;
+	border-radius:8px;
+}
+.div2{
+    /* background-color:#88bbdd; */
+    width:400px;
+    height:270px;
+    position:absolute;
+    right:50px;
+    left:600px;
+    top:200px;
+    bottom:400px;
+    border-radius:8px;
+}
+
+.firstclass{
+	size:50px;
+	font-family:Arial Black;
+	color:white;
+}
+.firstclass1{
+    color: #595959; 
+    margin-right:70px;
+    margin-left:50px; 
+}
+input[type=text],[type=password],[type=email],#agency{
+    width:300px;
+    padding:10px 10px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius:2px;
+    box-sizing: border-box;
+    margin-left:40px;
+    background-color:#d9d9d9;
+}
+input[type=checkbox]{
+	margin-left:40px;
+}
+input[type=submit]{
+    width:300px;
+    background-color:#4b69cc;
+    color: white;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    border-radius:2px;
+    cursor: pointer;
+    margin-left:40px;
+    border:1px solid #4b69cc;
+}
+input[type=submit]:hover {
+    background-color:#3d289e;
+    border:1px solid #3d289e;
+}
+input[type=submit]:visited {
+    background-color:#bf8040;
+    border:1px solid #bf8040;
+}
+.div1{
+	width:300px;
+	text-align:center;
+}
+a{
+	text-decoration:none;
+	color:#996633;
+}
+.signin{
+   padding-right: 100px;
+}
+nav {
+	width:100%;
+	height:100px;
+}
+ul {
+	margin-left:60px;
+}

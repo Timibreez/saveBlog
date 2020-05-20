@@ -1,0 +1,21 @@
+{% extends 'saveNow/mainn.html' %}
+
+{% block content %}
+<div class="div">
+	<p class="firstclass" align="center"><b>CREATE AN ACCOUNT</b></p>
+	<div class="container">
+	<form name="myform" align="center" method="POST" action="{% url 'users:signup' %}">
+		{% csrf_token %}
+		<!-- {{form}} -->
+		{{form.username}}
+		{{form.f_name}}
+		{{form.l_name}}
+		{{form.email}}
+		{{form.password1}}
+		{{form.password2}}
+	
+		<input align="center" type="submit" value="Sign Up">
+	</form>
+	</div>
+</div>
+{% endblock %}

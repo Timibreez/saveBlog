@@ -1,0 +1,18 @@
+{% extends 'saveNow/mainn.html' %}
+
+{% block content %}
+    <div class="container">
+        <div class="row">
+        <div class="col-md-4">
+        <h2>Save a Life</h2>
+        <form class="site-form" action="{% url 'saveNow:create' %} " method="post" enctype="multipart/form-data">
+            {% csrf_token %}
+            {{form}}
+            <input type="submit" value="CREATE POST">
+        </form>
+        </div>
+        <div class="col-md-4"></div>
+        <div class="col-md-4"></div>
+        </div>
+    </div>
+{% endblock %}

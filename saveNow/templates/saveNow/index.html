@@ -1,0 +1,65 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Save Now</title>
+    <link rel="stylesheet" type="text/css" href="{% static 'saveNow/Bootstrap/css/bootstrap.min.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% static 'saveNow/style.css' %}">
+    
+</head>
+<body>
+        <div class="row">
+                <div class=nav>
+                        <nav class="navbar navbar-expand-lg navbar-dark bg-dark navpadding">
+                                <a class="navbar-brand" href="#">LOGO</a>
+                                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                                        <span class="navbar-toggler-icon"></span>
+                                </button>
+        
+                        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                                <ul class="navbar-nav mr-auto">
+                                        <li class="nav-item active">
+                                        <a class="nav-link" href="{% url 'saveNow:index' %}">Home <span class="sr-only">(current)</span></a>
+                                        </li>
+                                </ul>
+                                        <center><ul class="navbar-nav mr-auto">            
+                                                {% if user.is_authenticated %}
+                                                        <li><form class="nav-item logout" action="{% url 'users:logout' %}" method="post">
+                                                                {% csrf_token %}
+                                                                <button type="submit">Logout</button>
+                                                        </form></li>
+                                                        <li class="nav-item create"><a class="nav-link" href="{% url 'saveNow:create' %}">Create Post</a></li>    
+                                                {% else %}
+                                                        <li class="nav-item signup"><a class="nav-link" href="{% url 'users:login' %}">Login</a></li>
+                                                        <li class="nav-item"><a class="nav-link" href="{% url 'users:signup' %}">Sign Up</a></li>
+                                                {% endif %}
+                                        </ul></center>
+                        </div>
+                        </nav>
+                    </div> 
+                </div>
+                <div class="wrapper">
+                        <div class="container">
+                                <div class="col-md-12">
+                                        {% for save in savepost %}
+                                        <img src="{{save.thumb.url}}" alt="img of activity" width="1070" height="500">
+                                        <h3>INFO</h3>
+                                        <span class="lead">{{save.rank}}</span>
+                                        <span class="lead">{{save.f_name}}</span>
+                                        <span class="lead">{{save.l_name}}</span></br>
+                                        <span class="lead">{{save.address}}</span>
+                                        <span class="lead">{{save.date}}</span>
+                                        {% endfor %}
+                                </div>
+                        </div>
+                                <div class="col-md-12 copyright">
+                                        &copy; Copyright All Rights Reserved SafeNow.com 2018-2020
+                                </div>
+                                
+                </div>
+
+</body>
+</html>
